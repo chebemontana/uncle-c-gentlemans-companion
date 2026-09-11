@@ -1,9 +1,17 @@
 {
-  "name": "Uncle C \u2014 Gentleman\u2019s Companion",
+  "name": "Uncle C — Gentleman’s Companion",
   "short_name": "Gentleman",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#071913",
   "theme_color": "#0b2b22",
-  "description": "A glossy emerald gentleman's style, grooming and presence handbook."
+  "description": "A glossy emerald gentleman's style, grooming and presence handbook.",
+  "id": "uncle-c-gentlemans-companion",
+  "dir": "auto",
+  "lang": "en",
+  "orientation": "any",
+  "categories": [
+    "books",
+    "lifestyle"
+  ]
 }
