@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b2b22">
+<title>Uncle C — Gentleman’s Companion</title>
+<style>
+:root {
+  --emerald:#0b2b22; --emerald2:#123f31; --glass:rgba(255,255,255,.10);
+  --gold:#d4aa45; --cream:#f6f0df; --ink:#13201b; --muted:#c9d4cd;
+  --line:rgba(212,170,69,.30); --shadow:0 18px 55px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:
+ radial-gradient(circle at 10% 0%,#235743 0,transparent 32%),
+ radial-gradient(circle at 100% 20%,#6b4a1c 0,transparent 28%),
+ linear-gradient(145deg,#061b15,#0b2b22 55%,#071913);color:var(--cream);}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);
+ background:rgba(5,25,19,.78);border-bottom:1px solid var(--line);padding:14px 18px;}
+.brand{font-family:Georgia,serif;letter-spacing:.12em;color:var(--gold);font-size:13px}
+nav{display:flex;gap:8px;overflow:auto;margin-top:10px}
+button,.navbtn{border:1px solid var(--line);background:var(--glass);color:var(--cream);
+ border-radius:999px;padding:9px 13px;white-space:nowrap}
+main{max-width:1100px;margin:auto;padding:22px 16px 80px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.card{background:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.055));
+ border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);border-radius:24px;
+ backdrop-filter:blur(16px);overflow:hidden}
+.hero-copy{padding:28px}
+.kicker{color:var(--gold);letter-spacing:.18em;font-size:12px}
+h1{font:700 clamp(34px,6vw,68px)/.94 Georgia,serif;margin:10px 0 14px}
+h2{font:700 28px/1.1 Georgia,serif;color:var(--gold);margin:0 0 12px}
+h3{font:700 18px/1.2 Georgia,serif;color:var(--gold)}
+p{color:#dce6df;line-height:1.6}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.badge{padding:8px 10px;border:1px solid var(--line);border-radius:12px;color:#ead9a5;background:rgba(0,0,0,.12)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.tile{padding:18px;min-height:150px}
+.tile small{color:var(--muted)}
+a{color:#f1cf73}
+.action{display:inline-block;padding:11px 14px;border-radius:12px;border:1px solid var(--gold);
+ color:var(--cream);text-decoration:none;background:rgba(212,170,69,.10);margin:4px 4px 4px 0}
+section{margin-top:28px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.12)}
+.book{padding:18px;display:flex;flex-direction:column;gap:8px}
+.book .meta{color:#cfd9d3;font-size:13px}
+.footer{text-align:center;color:#9fb1a7;padding:30px 0}
+.note{font-size:12px;color:#aebdb5}
+iframe{width:100%;height:72vh;border:0;border-radius:18px;background:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">UNCLE C · GENTLEMAN’S COMPANION</div>
+  <nav>
+    <a class="navbtn" href="#home">Home</a>
+    <a class="navbtn" href="#handbook">My Handbook</a>
+    <a class="navbtn" href="#visuals">Visual Gallery</a>
+    <a class="navbtn" href="#library">Reading Library</a>
+    <a class="navbtn" href="#routine">Routine</a>
+  </nav>
+</header>
+
+<main id="home">
+  <div class="hero card">
+    <div class="hero-copy">
+      <div class="kicker">CLASSIC 50+ · STYLE · GROOMING · PRESENCE</div>
+      <h1>The Black Gentleman’s Handbook</h1>
+      <p>A glossy, modern companion built around a mature gentleman’s standard: excellent grooming, proper fit, quiet confidence, thoughtful etiquette and purposeful style.</p>
+      <div class="badges">
+        <span class="badge">Sky-blue shirt</span>
+        <span class="badge">Charcoal trousers</span>
+        <span class="badge">Blue-dial watch</span>
+        <span class="badge">Full structured beard</span>
+        <span class="badge">Emerald · Olive · Gold · Burgundy</span>
+      </div>
+      <a class="action" href="#handbook">Open my handbook</a>
+      <a class="action" href="#library">Explore reading library</a>
+    </div>
+    <img src="assets/a_polished_cinematic_magazine_cover_handbook_c.png" alt="The Black Gentleman's Handbook cover">
+  </div>
+
+  <section id="handbook">
+    <h2>My Handbook</h2>
+    <div class="card" style="padding:12px">
+      <iframe src="assets/Black_Gentlemans_Handbook_Fresh_Edition.pdf#view=FitH" title="Fresh handbook"></iframe>
+      <div style="padding:10px">
+        <a class="action" href="assets/Black_Gentlemans_Handbook_Fresh_Edition.pdf" target="_blank">Open full PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="visuals">
+    <h2>Visual Gallery</h2>
+    <div class="gallery">
+      <img src="assets/a_polished_cinematic_magazine_cover_handbook_c.png" alt="Gentleman handbook visual"><img src="assets/a_polished_cinematic_high_end_portrait_scene_in.png" alt="Gentleman handbook visual"><img src="assets/a_clean_infographic_poster_layout_multi_panel_ha.png" alt="Gentleman handbook visual"><img src="assets/a_polished_magazine_style_infographic_handbook_la.png" alt="Gentleman handbook visual"><img src="assets/masterbook_contact.png" alt="Gentleman handbook visual"><img src="assets/a_richly_designed_infographic_poster_on_a_dark_cl.png" alt="Gentleman handbook visual"><img src="assets/a_high_resolution_magazine_style_infographic_layo.png" alt="Gentleman handbook visual"><img src="assets/a_clean_professional_infographic_layout_image_in.png" alt="Gentleman handbook visual"><img src="assets/a_polished_cinematic_high_resolution_promotional.png" alt="Gentleman handbook visual"><img src="assets/a_polished_infographic_poster_in_a_magazine_style.png" alt="Gentleman handbook visual"><img src="assets/a_polished_cinematic_magazine_cover_handbook_c.png" alt="Gentleman handbook visual"><img src="assets/a_polished_magazine_style_infographic_poster_with.png" alt="Gentleman handbook visual"><img src="assets/a_polished_infographic_poster_layout_dark_luxurio.png" alt="Gentleman handbook visual"><img src="assets/a_clean_high_resolution_infographic_guide_poster.png" alt="Gentleman handbook visual"><img src="assets/a_detailed_infographic_poster_image._overall_a_wi.png" alt="Gentleman handbook visual"><img src="assets/a_clean_elegant_infographic_style_collage_in_a_2x.png" alt="Gentleman handbook visual"><img src="assets/a_detailed_infographic_poster_image_a_polished_m.png" alt="Gentleman handbook visual"><img src="assets/a_detailed_infographic_poster_on_a_dark_elegant_b.png" alt="Gentleman handbook visual"><img src="assets/a_polished_magazine_style_infographic_poster_por.png" alt="Gentleman handbook visual"><img src="assets/a_polished_magazine_style_infographic_collage_lay.png" alt="Gentleman handbook visual"><img src="assets/a_clean_polished_infographic_guide_poster_in_a_ma.png" alt="Gentleman handbook visual"><img src="assets/a_polished_cinematic_high_end_portrait_scene_in.png" alt="Gentleman handbook visual">
+    </div>
+  </section>
+
+  <section id="library">
+    <h2>Curated Gentleman’s Library</h2>
+    <p class="note">These are linked resources, not bundled copies. Copyrighted books should be obtained from their publishers, retailers or libraries.</p>
+    <div class="grid">
+      
+      <article class="card book">
+        <h3>Getting It Together</h3>
+        <div class="meta">The Black Man&#x27;s Guide to Good Grooming and Fashion</div>
+        <div class="meta"><b>Mike Fields, with A. Peter Bailey</b></div>
+        <p>1983 foundation for Black men&#x27;s grooming and fashion. Use as historical foundation; some recommendations are dated.</p>
+        <a class="action" href="https://www.nypl.org/research/research-catalog/browse/subjects/Men%27s%20clothing/" target="_blank" rel="noopener">Open official/catalog page</a>
+      </article>
+      
+      <article class="card book">
+        <h3>Esquire: The Handbook of Men&#x27;s Style</h3>
+        <div class="meta">A Guide to Looking Good</div>
+        <div class="meta"><b>Esquire / Michael B. Dougherty</b></div>
+        <p>Modern visual menswear reference with 200+ photos and illustrations.</p>
+        <a class="action" href="https://www.penguinrandomhouse.com/books/738226/esquire-the-handbook-of-mens-style-by-the-editors-of-esquire/" target="_blank" rel="noopener">Open official/catalog page</a>
+      </article>
+      
+      <article class="card book">
+        <h3>How To Be a Man</h3>
+        <div class="meta">A Guide To Style and Behavior For The Modern Gentleman</div>
+        <div class="meta"><b>Glenn O&#x27;Brien</b></div>
+        <p>Style, grooming, etiquette and social behaviour; illustrated by Jean-Philippe Delhomme.</p>
+        <a class="action" href="https://www.rizzoliusa.com/book/9780847836956%26v%3Dlocal/" target="_blank" rel="noopener">Open official/catalog page</a>
+      </article>
+      
+      <article class="card book">
+        <h3>Well Dressed Gentleman&#x27;s Pocket Guide</h3>
+        <div class="meta">Classic dress codes, tailoring, materials and etiquette</div>
+        <div class="meta"><b>Oscar Lenius</b></div>
+        <p>Illustrated guide to dress codes, wardrobe pieces, materials, colour and classic mistakes.</p>
+        <a class="action" href="https://books.google.com/books/about/Well_Dressed_Gentleman_s_Pocket_Guide.html?id=QgCejwEACAAJ" target="_blank" rel="noopener">Open official/catalog page</a>
+      </article>
+      
+    </div>
+  </section>
+
+  <section id="routine">
+    <h2>Gentleman’s Routine</h2>
+    <div class="grid">
+      <div class="card tile"><h3>Morning</h3><small>Grooming · SPF · beard check · shoes · outfit · posture reset</small></div>
+      <div class="card tile"><h3>Evening</h3><small>Cleanse · moisturise · beard/skin care · prepare tomorrow’s clothing</small></div>
+      <div class="card tile"><h3>Weekly</h3><small>Barber · nails · shoe care · wardrobe inspection · shirt pressing</small></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div style="color:var(--gold);font:700 18px Georgia,serif">CLASSIC · CONFIDENT · PURPOSEFUL</div>
+    <p>Designed as a personal style and presence companion for Uncle C.</p>
+  </div>
+</main>
+</body>
+</html>
